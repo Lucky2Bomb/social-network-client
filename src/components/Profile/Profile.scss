@@ -1,0 +1,52 @@
+.profile {
+    background-color: #e1b12c;
+    grid-area: profile;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    "profile-main profile-description"
+    "posts posts"
+    ;
+    grid-template-columns: $laptop-profile-main-grid-width auto;
+    grid-template-rows: $laptop-profile-main-grid-height auto;
+}
+
+.profile-main {
+    grid-area: profile-main;
+    top: -80px;
+    margin-left: 20px;
+    width: $laptop-profile-main-width;
+    position: relative;
+
+    &__img-wrapper {
+        width: $laptop-profile-main-width;
+        height: $laptop-profile-main-width;
+        border: 3px solid #00f7ff;
+        border-radius: 50%;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    &__name {
+        padding-top: 5px;
+        text-align: center;
+        font-size: 25px;
+    }
+}
+
+.profile-description {
+    grid-area: profile-description;
+    &__text {
+        padding: 10px 10px 0 0;
+    }
+}
+
+.posts {
+    grid-area: posts;
+}
