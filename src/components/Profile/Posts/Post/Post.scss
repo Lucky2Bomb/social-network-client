@@ -1,0 +1,39 @@
+.post-item {
+    max-width: $laptop-width-content;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: "post-item-avatar post-item-author"
+    "post-item-avatar post-item-text"
+    "post-item-like post-item-like";
+    padding: $post-padding;
+
+    &__img-avatar-wrapper {
+        width: $avatar-size-3;
+        height: $avatar-size-3;
+        grid-area: post-item-avatar;
+        padding: $post-img-padding;
+        border-radius: 50%;
+    }
+
+    &__img-avatar {
+        width: 100%;
+        height: 100%;
+        background-color: #aaa;
+        border-radius: 50%;
+    }
+    
+    &__author {
+        grid-area: post-item-author;
+    }
+
+
+    &__text-wrapper {
+        grid-area: post-item-text;
+    }
+    
+    &__like-wrapper {
+        grid-area: post-item-like;
+        text-align: right;
+        border-bottom: 1px solid #aaa;
+    }
+}

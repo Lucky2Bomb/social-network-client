@@ -1,5 +1,6 @@
 import React from "react";
 import "../../sass/style.scss";
+import Posts from "./Posts/Posts";
 
 const Profile = () => {
     return (
@@ -15,7 +16,7 @@ const Profile = () => {
             </div>
 
             <div className="profile-description">
-                <div className="profile-description__text">
+                <p className="profile-description__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum, nisl at
                     commodo malesuada, sem est ultrices elit, at tempus justo odio a diam. Curabitur vel
                     ligula varius, porta purus nec, rutrum purus. Phasellus magna velit, malesuada nec
@@ -26,24 +27,10 @@ const Profile = () => {
                     metus vitae massa facilisis, nec sodales lacus congue. Sed eleifend gravida orci
                     et porta. Vivamus eget ipsum neque. In hac habitasse platea dictumst. Morbi
                     condimentum tellus ipsum, ultricies laoreet sem placerat at.
-                </div>
+                </p>
             </div>
 
-            <div className="posts">
-                Profile posts
-                <div>
-                    post
-                </div>
-                <div>
-                    post
-                </div>
-                <div>
-                    post
-                </div>
-                <div>
-                    post
-                </div>
-            </div>
+            <Posts />
         </div>
     )
 }

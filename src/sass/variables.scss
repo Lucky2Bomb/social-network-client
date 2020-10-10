@@ -1,22 +1,51 @@
 $font-family: Arial, Helvetica, sans-serif;
 
 //devices aspect ratio
-$max-mobile-width: 767px;
-$min-tablet-width: 768px;
-$max-tablet-width: 1023px;
-$min-laptop-width: 1024px;
+$screen-sm-min: 480px;
+$screen-sm-max: 767px;
 
+$screen-md-min: 768px;
+$screen-md-max: 1279px;
 
-$laptop-app-padding: 20px 0 0 0;
+$screen-lg-min: 1280px;
+$screen-lg-max: 12000px;
 
+    
+//avatar size   
+$avatar-size-1: 200px;
+$avatar-size-2: 100px;
+$avatar-size-3: 80px;
+    
+$laptop-app-padding:            20px 0 0 0;
+
+//header
+$header-background-color: #0097e6;
 $laptop-header-height: 150px;
 
+//navbar
+$navbar-background-color: #e84118;
 $laptop-navbar-height: 50px;
 
-$laptop-width-content: 1000px;
+//main
+$laptop-width-content: 1100px;
+$main-background-color: #487eb0;
 
+//profile
+$profile-background-color: #e1b12c;
 $laptop-profile-main-width: 200px;
 $laptop-profile-main-grid-width: 250px;
 $laptop-profile-main-grid-height: 200px;
 
+//post
+$post-padding: 5px 10px 10px 10px;
+$post-img-padding: 0 10px 0 0;
+
+//buttons
+$button-default-padding: 5px 10px;
+$button-default-background-color: #00a6ff;
+$button-default-background-color--hover: lighten($button-default-background-color, 5%);
+$button-default-background-color--active: darken($button-default-background-color, 5%);
+
+//footer
+$footer-background-color: #44bd32;
 $laptop-footer-height: 150px;

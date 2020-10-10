@@ -13,15 +13,19 @@
 body {
     font-family: $font-family;
     text-align: justify;
+    overflow-x: hidden; /*для горизонтального*/
 }
 
 .app {
     padding: $laptop-app-padding;
     box-sizing: border-box;
+    overflow: hidden;
     width: 100vw;
+
     min-height: 100vh;
     display: grid;
     justify-content: center;
+    overflow: hidden;
 }
 
 .app-container {
@@ -38,6 +42,7 @@ body {
     grid-template-areas: "nav-container" "content-contaner";
     grid-template-rows: $laptop-navbar-height auto;
     justify-self: center;
+    background-color: #487eb0;
 }
 
 .nav-container {

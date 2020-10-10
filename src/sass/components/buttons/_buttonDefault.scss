@@ -1,0 +1,10 @@
+.button-default {
+    background-color: $button-default-background-color;
+    padding: $button-default-padding;
+    &:hover {
+        background-color: $button-default-background-color--hover;
+    }
+    &:active {
+        background-color: $button-default-background-color--active;
+    }
+}

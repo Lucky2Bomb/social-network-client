@@ -1,5 +1,5 @@
 .profile {
-    background-color: #e1b12c;
+    background-color: $profile-background-color;
     grid-area: profile;
     height: 100%;
     display: grid;
@@ -9,6 +9,7 @@
     ;
     grid-template-columns: $laptop-profile-main-grid-width auto;
     grid-template-rows: $laptop-profile-main-grid-height auto;
+    z-index: 2;
 }
 
 .profile-main {
@@ -19,8 +20,8 @@
     position: relative;
 
     &__img-wrapper {
-        width: $laptop-profile-main-width;
-        height: $laptop-profile-main-width;
+        width: $avatar-size-1;
+        height: $avatar-size-1;
         border: 3px solid #00f7ff;
         border-radius: 50%;
     }
@@ -45,8 +46,4 @@
     &__text {
         padding: 10px 10px 0 0;
     }
-}
-
-.posts {
-    grid-area: posts;
 }
