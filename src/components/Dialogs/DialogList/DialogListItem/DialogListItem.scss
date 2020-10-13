@@ -1,0 +1,8 @@
+.dialog-list-item {
+    grid-area: dialog-list-item;
+    padding-bottom: 5px;
+    & a.active {
+        background-color: #000;
+        color: #fff;
+    }
+}

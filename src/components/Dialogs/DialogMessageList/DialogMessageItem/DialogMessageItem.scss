@@ -1,0 +1,16 @@
+.dialog-message-item {
+    display: grid;
+    &_my-message {
+        justify-self: start;
+    }
+
+    &_not-my-message {
+        justify-self: end;
+    }
+
+    &_not-my-message, &_my-message {
+        border: 1px solid #000;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}

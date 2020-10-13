@@ -11,6 +11,13 @@
 
 @import "../components/Dialogs/Dialogs.scss";
 
+@import "../components/Dialogs/DialogList/DialogList.scss";
+@import "../components/Dialogs/DialogList/DialogListItem/DialogListItem.scss";
+
+@import "../components/Dialogs/DialogMessageList/DialogMessageList.scss";
+@import "../components/Dialogs/DialogMessageList/DialogMessageItem/DialogMessageItem.scss";
+
+
 @import "../components/Footer/Footer.scss";
 
 @import "./components/buttons/buttonDefault";
