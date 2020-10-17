@@ -7,7 +7,7 @@ import Dialogs from './components/Dialogs/Dialogs';
 import Footer from './components/Footer/Footer';
 import { Route, BrowserRouter } from 'react-router-dom';
 
-function App() {
+function App(props) {
   return (
     <div className="app">
       <BrowserRouter>
@@ -15,11 +15,11 @@ function App() {
           <Header />
           <main className="main">
             <div className="nav-container">
-              <Navbar />
+              <Navbar navbar={props.props.navbar}/>
             </div>
             <div className="content-contaner">
-              <Route path="/profile" component={Profile} />
-              <Route path="/dialogs" component={Dialogs} />
+              <Route path="/profile" render={() => <Profile profile={props.props.profile}/>} />
+              <Route path="/dialogs" render={() => <Dialogs dialogs={props.props.dialogs} />}  />
             </div>
           </main>
           <Footer />

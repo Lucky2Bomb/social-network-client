@@ -1,12 +1,10 @@
 .profile {
     background-color: $profile-background-color;
     grid-area: profile;
+    padding: $laptop-default-padding;
     height: 100%;
     display: grid;
-    grid-template-areas: 
-    "profile-main profile-description"
-    "posts posts"
-    ;
+    grid-template-areas: "profile-main profile-description" "posts posts";
     grid-template-columns: $laptop-profile-main-grid-width auto;
     grid-template-rows: $laptop-profile-main-grid-height auto;
     z-index: 2;
@@ -43,6 +41,7 @@
 
 .profile-description {
     grid-area: profile-description;
+
     &__text {
         padding: 10px 10px 0 0;
     }

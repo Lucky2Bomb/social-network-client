@@ -1,0 +1,18 @@
+.navbar-item {
+    display: flex;
+    align-items: center;
+    
+    & a {
+        padding: 5px;
+    }
+    
+    & a:hover {
+        background-color: #000135;
+        color: #fff;
+    }
+    
+    & a.active {
+        background-color: #000135;
+        color: #fff;
+    }
+}

@@ -2,7 +2,8 @@ import React from "react";
 import "../../sass/style.scss";
 import Posts from "./Posts/Posts";
 
-const Profile = () => {
+const Profile = (props) => {
+    debugger;
     return (
         <div className="profile">
             <div className="profile-main">
@@ -30,7 +31,7 @@ const Profile = () => {
                 </p>
             </div>
 
-            <Posts />
+            <Posts posts={props.profile.posts}/>
         </div>
     )
 }

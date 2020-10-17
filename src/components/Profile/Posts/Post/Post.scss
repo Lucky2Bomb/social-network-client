@@ -5,6 +5,7 @@
     grid-template-areas: "post-item-avatar post-item-author"
     "post-item-avatar post-item-text"
     "post-item-like post-item-like";
+    grid-template-columns: $avatar-size-3 auto;
     padding: $post-padding;
 
     &__img-avatar-wrapper {
@@ -23,12 +24,15 @@
     }
     
     &__author {
+        text-align: left;
+        padding: 0 0 10px 10px;
         grid-area: post-item-author;
     }
 
 
-    &__text-wrapper {
+    &__message-wrapper {
         grid-area: post-item-text;
+        padding: 0 0 10px 10px;
     }
     
     &__like-wrapper {

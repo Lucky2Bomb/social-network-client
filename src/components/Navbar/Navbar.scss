@@ -6,21 +6,4 @@
     flex-direction: row;
     justify-content: space-around;
     padding-left: $laptop-profile-main-width;
-    &__item {
-        display: flex;
-        align-items: center;
-    }
-    &__item a {
-        padding: 5px;
-    }
-
-    &__item a:hover {
-        background-color: #000135;
-        color: #fff;
-    }
-
-    &__item a.active {
-        background-color: #000135;
-        color: #fff;
-    }
 }
