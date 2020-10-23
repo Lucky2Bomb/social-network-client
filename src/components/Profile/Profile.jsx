@@ -3,7 +3,6 @@ import "../../sass/style.scss";
 import Posts from "./Posts/Posts";
 
 const Profile = (props) => {
-    debugger;
     return (
         <div className="profile">
             <div className="profile-main">
@@ -31,7 +30,7 @@ const Profile = (props) => {
                 </p>
             </div>
 
-            <Posts posts={props.profile.posts}/>
+            <Posts posts={props.profile.posts} dispatch={props.dispatch} newPostText={props.profile.newPostText}/>
         </div>
     )
 }

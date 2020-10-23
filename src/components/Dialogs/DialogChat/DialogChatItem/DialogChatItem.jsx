@@ -1,7 +1,7 @@
 import React from "react";
-import "./DialogMessageItem.scss";
+import "./DialogChatItem.scss";
 
-const DialogMessageItem = (props) => {
+const DialogChatItem = (props) => {
     let messageClass = null;
     if (props.isMyMessage) {
         messageClass = "dialog-message-item_my-message";
@@ -17,4 +17,4 @@ const DialogMessageItem = (props) => {
     )
 }
 
-export default DialogMessageItem;
+export default DialogChatItem;

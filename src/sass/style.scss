@@ -8,18 +8,18 @@
 
 @import "../components/Profile/Profile.scss";
 @import "../components/Profile/Posts/Posts.scss";
+@import "../components/Profile/Posts/NewPost/NewPost.scss";
 @import "../components/Profile/Posts/Post/Post.scss";
 
 @import "../components/Dialogs/Dialogs.scss";
-
+@import "../components/Dialogs/DialogChat/DialogChatInput/DialogChatInput.scss";
 @import "../components/Dialogs/DialogList/DialogList.scss";
 @import "../components/Dialogs/DialogList/DialogListItem/DialogListItem.scss";
-
-@import "../components/Dialogs/DialogMessageList/DialogMessageList.scss";
-@import "../components/Dialogs/DialogMessageList/DialogMessageItem/DialogMessageItem.scss";
-
+@import "../components/Dialogs/DialogChat/DialogChat.scss";
+@import "../components/Dialogs/DialogChat/DialogChatItem/DialogChatItem.scss";
 
 @import "../components/Footer/Footer.scss";
 
 @import "./components/buttons/buttonDefault";
 @import "./components/containers/dialogItemContainer";
+@import "./components/inputs/textareaDefault";
