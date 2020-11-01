@@ -51,23 +51,25 @@ let initialState = {
     dialogMessageText: "Hi!",
 };
 
-const DialogsReducer = (state = initialState, action) => {
+const dialogsReducer = (state = initialState, action) => {
+    let stateCopy = { ...state };
     switch (action.type) {
         case SEND_MESSAGE:
             let newMessage = {
                 isMyMessage: true,
                 message: state.dialogMessageText
             }
-            state.dialogMessageList.push(newMessage);
-            state.dialogMessageText = "";
-            return state;
+            stateCopy.dialogMessageList = [...state.dialogMessageList];
+            stateCopy.dialogMessageList.push(newMessage);
+            stateCopy.dialogMessageText = "";
+            return stateCopy;
 
         case UPDATE_NEW_MESSAGE_CHAT:
-            state.dialogMessageText = action.message;
-            return state;
+            stateCopy.dialogMessageText = action.message;
+            return stateCopy;
 
         default:
-            return state;
+            return stateCopy;
     }
 }
 
@@ -84,4 +86,4 @@ export const updateNewMessageChatActionCreator = (message) => {
     }
 }
 
-export default DialogsReducer;
+export default dialogsReducer;

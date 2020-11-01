@@ -1,18 +1,14 @@
 import React from "react";
 import "./Dialogs.scss";
-import DialogList from "./DialogList/DialogList";
-import DialogChat from "./DialogChat/DialogChat";
+import DialogListContainer from "./DialogList/DialogListContainer";
+import DialogChatContainer from "./DialogChat/DialogChatContainer";
 
 const Dialogs = (props) => {
-
     return (
         <div className="dialogs">
 
-            <DialogList dialogList={props.dialogs.dialogList}/>
-            <DialogChat 
-            dialogMessageList={props.dialogs.dialogMessageList} 
-            dispatch={props.dispatch}
-            dialogMessageText={props.dialogs.dialogMessageText}/>
+            <DialogListContainer/>
+            <DialogChatContainer/>
         </div>
     )
 }

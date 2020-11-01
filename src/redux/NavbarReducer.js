@@ -15,9 +15,9 @@ let initialState = [{
     name: "settings"
 }];
 
-const NavbarReducer = (state = initialState, action) => {
+const navbarReducer = (state = initialState, action) => {
 
     return state;
 
 }
-export default NavbarReducer;
+export default navbarReducer;

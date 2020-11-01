@@ -1,7 +1,7 @@
 import React from 'react';
 import './sass/style.scss';
 import Header from './components/Header/Header';
-import Navbar from './components/Navbar/Navbar';
+import NavbarContainer from './components/Navbar/NavbarContainer';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import Footer from './components/Footer/Footer';
@@ -14,11 +14,11 @@ function App(props) {
         <Header />
         <main className="main">
           <div className="nav-container">
-            <Navbar navbar={props.state.navbar} />
+            <NavbarContainer store={props.store} />
           </div>
           <div className="content-contaner">
-            <Route path="/profile" render={() => <Profile profile={props.state.profile} dispatch={props.dispatch} />} />
-            <Route path="/dialogs" render={() => <Dialogs dialogs={props.state.dialogs} dispatch={props.dispatch} />} />
+            <Route path="/profile" render={() => <Profile/>} />
+            <Route path="/dialogs" render={() => <Dialogs/>} />
           </div>
         </main>
         <Footer />

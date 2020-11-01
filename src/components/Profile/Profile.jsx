@@ -1,6 +1,6 @@
 import React from "react";
 import "../../sass/style.scss";
-import Posts from "./Posts/Posts";
+import PostsContainer from "./Posts/PostsContainer";
 
 const Profile = (props) => {
     return (
@@ -30,7 +30,7 @@ const Profile = (props) => {
                 </p>
             </div>
 
-            <Posts posts={props.profile.posts} dispatch={props.dispatch} newPostText={props.profile.newPostText}/>
+            <PostsContainer store={props.store}/>
         </div>
     )
 }

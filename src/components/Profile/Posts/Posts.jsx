@@ -2,7 +2,6 @@ import React from "react";
 import Post from "./Post/Post";
 import "./Posts.scss";
 import NewPost from "./NewPost/NewPost";
-import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../redux/ProfileReducer";
 
 const Posts = (props) => {
     const dataPostsElements = props.posts.map(item =>
@@ -11,22 +10,22 @@ const Posts = (props) => {
             message={item.message}
             likeCount={item.likeCount}
         />).reverse();
-    
+
     let newPostElemenent = React.createRef();
-    
-    let addPost = () => {
-        props.dispatch(addPostActionCreator());
+
+    let onAddPost = () => {
+        props.onAddPost();
     }
 
     let onPostChange = () => {
-        let newText = newPostElemenent.current.value;
-        props.dispatch(updateNewPostTextActionCreator(newText));
+        let text = newPostElemenent.current.value;
+        props.onPostChange(text);
     }
 
     return (
         <div className="posts">
             Profile posts
-            <NewPost refElement={newPostElemenent} func={addPost} onChange={onPostChange} newPostText={props.newPostText}/>
+            <NewPost refElement={newPostElemenent} func={onAddPost} onChange={onPostChange} newPostText={props.newPostText} />
             {dataPostsElements}
 
 

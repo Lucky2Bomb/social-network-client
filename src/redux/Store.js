@@ -1,5 +1,5 @@
-import ProfileReducer from "./ProfileReducer";
-import DialogsReducer from "./DialogsReducer";
+import profileReducer from "./ProfileReducer";
+import dialogsReducer from "./DialogsReducer";
 
 let store = {
     _state: {
@@ -151,8 +151,8 @@ let store = {
 
     dispatch(action) {
 
-        this._state.profile = ProfileReducer(this._state.profile, action);   
-        this._state.dialogs = DialogsReducer(this._state.dialogs, action); 
+        this._state.profile = profileReducer(this._state.profile, action);   
+        this._state.dialogs = dialogsReducer(this._state.dialogs, action); 
 
         this._callSubscriber(this._state);
     }
