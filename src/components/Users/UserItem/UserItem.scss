@@ -1,0 +1,48 @@
+.user-item-contaner {
+    margin-top: 10px;
+    background-color: #38ada9;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: $avatar-size-2 auto 10%;
+    grid-template-areas: "user-item-img user-item-name user-item-follow" "user-item-img user-item-status user-item-follow" "user-item-img user-item-location user-item-follow";
+    text-align: justify;
+    margin-bottom: 10px;
+    
+    &__img-wrapper {
+        grid-area: user-item-img;
+        width: $avatar-size-2;
+        height: $avatar-size-2;
+        border-radius: 50%;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        background-color: #aaa;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    &__name-wrapper {
+        padding-left: 10px;
+        grid-area: user-item-name;
+    }
+
+    &__status-wrapper {
+        padding-left: 10px;
+        grid-area: user-item-status;
+    }
+
+    
+    &__location-wrapper {
+        padding-left: 10px;
+        grid-area: user-item-location;
+    }
+
+    
+    &__follow-wrapper {
+        padding-left: 10px;
+        grid-area: user-item-follow;
+    }
+}
