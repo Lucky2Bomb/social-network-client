@@ -5,6 +5,9 @@ let initialState = [{
     path: "/dialogs",
     name: "dialogs"
 }, {
+    path: "/users",
+    name: "users"
+}, {
     path: "/news",
     name: "news"
 }, {

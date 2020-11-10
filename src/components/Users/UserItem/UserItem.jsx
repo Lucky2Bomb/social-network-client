@@ -1,12 +1,13 @@
 import React from "react";
 import "../../../sass/style.scss";
+import no_image from "../../../assets/images/no_avatar.jpg";
 
 const UserItem = (props) => {
     
     return (
         <div className="user-item-contaner" key={props.user.id}>
             <div className="user-item-contaner__img-wrapper">
-                <img src={props.user.avatarUrl} alt="" className="user-item-contaner__img" />
+                <img src={props.user.avatarUrl == null || props.user.avatarUrl === "" ? no_image : props.user.avatarUrl } alt="" className="user-item-contaner__img" />
             </div>
 
             <div className="user-item-contaner__name-wrapper">
@@ -18,7 +19,7 @@ const UserItem = (props) => {
             </div>
 
             <div className="user-item-contaner__location-wrapper">
-                {props.user.location.country}, {props.user.location.city}
+                {/* {props.user.location.country}, {props.user.location.city} */}
             </div>
 
             <div className="user-item-contaner__follow-wrapper">
