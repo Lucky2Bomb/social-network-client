@@ -1,5 +1,5 @@
 import React from "react";
-import { updateNewMessageChatActionCreator, sendMessageActionCreator } from "../../../redux/DialogsReducer";
+import { updateNewMessageChat, sendMessage } from "../../../redux/DialogsReducer";
 import DialogChat from "./DialogChat";
 import { connect } from "react-redux";
 
@@ -30,17 +30,20 @@ let mapStateToProps = (state) => {
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-        onAddMessage: () => {
-            dispatch(sendMessageActionCreator());
-        },
-        onMessageChange: (message) => {
-            dispatch(updateNewMessageChatActionCreator(message));
-        }
-    }
-}
+// let mapDispatchToProps = (dispatch) => {
+//     return {
+//         onAddMessage: () => {
+//             dispatch(sendMessageActionCreator());
+//         },
+//         onMessageChange: (message) => {
+//             dispatch(updateNewMessageChatActionCreator(message));
+//         }
+//     }
+// }
 
-const DialogChatContainer = connect(mapStateToProps, mapDispatchToProps)(DialogChat); 
+const DialogChatContainer = connect(mapStateToProps, {
+    onAddMessage: sendMessage,
+    onMessageChange: updateNewMessageChat
+})(DialogChat); 
 
 export default DialogChatContainer;

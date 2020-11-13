@@ -82,13 +82,13 @@ const dialogsReducer = (state = initialState, action) => {
     }
 }
 
-export const sendMessageActionCreator = () => {
+export const sendMessage = () => {
     return {
         type: SEND_MESSAGE
     }
 }
 
-export const updateNewMessageChatActionCreator = (message) => {
+export const updateNewMessageChat = (message) => {
     return {
         type: UPDATE_NEW_MESSAGE_CHAT,
         message
