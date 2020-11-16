@@ -24,7 +24,6 @@ const Posts = (props) => {
 
     return (
         <div className="posts">
-            Profile posts
             <NewPost refElement={newPostElemenent} func={onAddPost} onChange={onPostChange} newPostText={props.newPostText} />
             {dataPostsElements}
 

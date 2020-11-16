@@ -2,11 +2,11 @@ import React from 'react';
 import './sass/style.scss';
 import Header from './components/Header/Header';
 import NavbarContainer from './components/Navbar/NavbarContainer';
-import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import UsersContainer from './components/Users/UsersContainer';
 import Footer from './components/Footer/Footer';
 import { Route } from 'react-router-dom';
+import ProfileContainer from './components/Profile/ProfileContainer';
 
 function App(props) {
   return (
@@ -18,8 +18,8 @@ function App(props) {
             <NavbarContainer store={props.store} />
           </div>
           <div className="content-contaner">
-            <Route path="/profile" render={() => <Profile/>} />
-            <Route path="/dialogs" render={() => <Dialogs/>} />
+            <Route path="/profile/:userId?" render={() => <ProfileContainer />} />
+            <Route path="/dialogs" render={() => <Dialogs />} />
             <Route path="/users" render={() => <UsersContainer />} />
           </div>
         </main>
